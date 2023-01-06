@@ -1,0 +1,77 @@
+.profile {
+  margin: 0 auto;
+  width: 280px;
+
+  /* font-family: 'Trebuchet MS', sans-serif; */
+
+  background: #ffffff;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  overflow: clip;
+}
+
+.description {
+  padding: 32px;
+  text-align: center;
+}
+
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-position: center;
+  object-fit: cover;
+
+  margin: 0 auto 24px auto;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.36;
+  margin-bottom: 8px;
+}
+
+.tag,
+.location {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.36;
+  color: #aeaeae;
+}
+
+.tag {
+  margin-bottom: 8px;
+}
+
+.stats {
+  display: grid;
+  /* padding-top: 1px; */
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  /* gap: 1px; */
+
+  background: #f3f3f3;
+  border-top: 1px solid #aeaeae;
+}
+
+.stats > li {
+  padding: 18px 8px;
+  text-align: center;
+}
+.stats > li:not(:last-child) {
+  border-right: 1px solid #aeaeae;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  line-height: 1.36;
+  margin-bottom: 3px;
+}
+
+.quantity {
+  display: block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.36;
+}
