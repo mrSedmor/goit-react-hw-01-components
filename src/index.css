@@ -10,6 +10,7 @@ body {
 
   background-color: #e7ecf2;
   padding: 16px;
+  min-width: 320px;
 }
 
 code {
@@ -28,6 +29,8 @@ img {
   max-width: 100%;
 }
 
+h1,
+h2,
 p {
   margin: 0;
 }
