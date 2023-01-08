@@ -1,8 +1,14 @@
-import { Profile, Statistics, FriendList } from './';
+import {
+  Profile,
+  Statistics,
+  FriendList,
+  TransactionHistory,
+} from 'components';
 import css from './App.module.css';
 import user from 'data/user.json';
 import data from 'data/data.json';
 import friends from 'data/friends.json';
+import transactions from 'data/transactions.json';
 
 export const App = () => {
   return (
@@ -24,6 +30,9 @@ export const App = () => {
       </li>
       <li key="task-3" className={css.task}>
         <FriendList friends={friends} />
+      </li>
+      <li key="task-4" className={css.task}>
+        <TransactionHistory items={transactions} />
       </li>
     </ul>
   );
