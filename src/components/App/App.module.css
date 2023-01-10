@@ -1,6 +1,0 @@
-.taskList {
-}
-
-.task:not(:last-child) {
-  margin-bottom: 32px;
-}

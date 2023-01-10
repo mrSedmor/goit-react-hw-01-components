@@ -4,7 +4,8 @@ import {
   FriendList,
   TransactionHistory,
 } from 'components';
-import css from './App.module.css';
+
+import { TaskList, Task } from './App.styled';
 import user from 'data/user.json';
 import data from 'data/data.json';
 import friends from 'data/friends.json';
@@ -12,8 +13,8 @@ import transactions from 'data/transactions.json';
 
 export const App = () => {
   return (
-    <ul className={css.taskList}>
-      <li key="task-1" className={css.task}>
+    <TaskList>
+      <Task key="task-1">
         <Profile
           username={user.username}
           tag={user.tag}
@@ -21,19 +22,19 @@ export const App = () => {
           avatar={user.avatar}
           stats={user.stats}
         />
-      </li>
-      <li key="task-2.1" className={css.task}>
+      </Task>
+      <Task key="task-2.1">
         <Statistics title="Upload stats" stats={data} />
-      </li>
-      <li key="task-2.2" className={css.task}>
+      </Task>
+      <Task key="task-2.2">
         <Statistics stats={data} />
-      </li>
-      <li key="task-3" className={css.task}>
+      </Task>
+      <Task key="task-3">
         <FriendList friends={friends} />
-      </li>
-      <li key="task-4" className={css.task}>
+      </Task>
+      <Task key="task-4">
         <TransactionHistory items={transactions} />
-      </li>
-    </ul>
+      </Task>
+    </TaskList>
   );
 };
