@@ -4,9 +4,9 @@ export const Container = styled.div`
   margin: 0 auto;
   width: 280px;
 
-  background: #ffffff;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
+  background: ${p => p.theme.backgroundColor.primary};
+  box-shadow: ${p => p.theme.boxShadow};
+  border-radius: ${p => p.theme.borderRadius}px;
   overflow: clip;
 `;
 

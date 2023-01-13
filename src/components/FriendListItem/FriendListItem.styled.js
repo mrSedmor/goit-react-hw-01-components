@@ -5,8 +5,8 @@ export const Item = styled.li`
   align-items: center;
   column-gap: 12px;
   padding: 6px 12px;
-  background-color: #ffffff;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  background-color: ${p => p.theme.backgroundColor.primary};
+  box-shadow: ${p => p.theme.boxShadow};
   border-radius: 2px;
 `;
 

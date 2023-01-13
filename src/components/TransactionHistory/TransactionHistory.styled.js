@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const Table = styled.table`
   margin: 0 auto;
   background: #e4e4e4;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
+  box-shadow: ${p => p.theme.boxShadow};
+  border-radius: ${p => p.theme.borderRadius}px;
   width: 100%;
   max-width: 640px;
   border-collapse: collapse;
@@ -14,14 +14,12 @@ export const Row = styled.tr`
   height: 40px;
 `;
 
-export const HeaderRow = styled.tr`
-  height: 40px;
-`;
+export const HeaderRow = styled(Row)``;
 
 export const HeaderCell = styled.th`
   font-weight: 600;
   font-size: 14px;
-  line-height: 1export const 36;
+  line-height: 1.36;
 
   color: #ffffff;
   background-color: #00bcd5;
@@ -44,9 +42,9 @@ export const HeaderCell = styled.th`
 export const Cell = styled.td`
   padding: 0 8px;
   font-size: 13px;
-  line-height: 1export const 36;
+  line-height: 1.36;
   text-align: center;
-  background-color: #ffffff;
+  background-color: ${p => p.theme.backgroundColor.primary};
 
   &:not(:last-child) {
     border-right: 2px solid #e4e4e4;
