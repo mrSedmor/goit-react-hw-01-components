@@ -16,7 +16,7 @@ export function Profile({
   tag,
   location,
   avatar,
-  stats: { followers, views, likes } = {},
+  stats: { followers, views, likes },
 }) {
   return (
     <Container>
@@ -44,6 +44,10 @@ export function Profile({
   );
 }
 
+Profile.defaultProps = {
+  stats: {},
+};
+
 Profile.propTypes = {
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
@@ -57,5 +61,5 @@ Profile.propTypes = {
 };
 
 function formatQuantity(number) {
-  return number.toLocaleString('en-US');
+  return number && number.toLocaleString('en-US');
 }
